@@ -20,13 +20,13 @@ const Sidebar = () => {
     setMinPrice,
     maxPrice,
     setMaxPrice,
-    keyword,
+    // keyword,
     setKeyword
     } = useFilter();
 
 
     const [categories, setcategories] = useState<string[]>([]);
-    const [ keywords] = useState<string[]>([
+    const [keywords] = useState<string[]>([
         "apple",
         "watch",
         "Fashion",
@@ -40,7 +40,7 @@ const Sidebar = () => {
 
             try {
 
-                const response = await fetch('https://dummyjson.com/products ')
+                const response = await fetch('https://dummyjson.com/products')
                 const data: FetchResponse = await response.json()
 
                 const uniqueCategories = Array.from(
@@ -154,7 +154,7 @@ const Sidebar = () => {
                 <button
                 key={index}
                 onClick={()=> handleKeywordClick(keyword)}
-                 className="block mb-2 px-4 py-2 w-full text-left borer-rounded hover:bg-gray-200">
+                 className="block mb-2 px-4 py-2 w-full text-left border rounded hover:bg-gray-200">
 
                     {keyword.toUpperCase()}
                  </button>
@@ -163,7 +163,7 @@ const Sidebar = () => {
         </div>
         </div>
 
-       <button onClick={handleResetFilters} className="w-full py-2 bg-black text-white rouonded mt-5 mb-[4rem]">
+       <button onClick={handleResetFilters} className="w-full py-2 bg-black text-white rounded mt-5 mb-[4rem]">
         Reset Filters
        </button>
 

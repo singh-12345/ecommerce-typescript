@@ -4,10 +4,10 @@ interface BookCardProps{
     id:string;
     title:string;
     image:string;
-    price:number
+    // price:number
 }
 
-const BookCard: React.FC<BookCardProps> = ({id,title,image,price}) => {
+const BookCard: React.FC<BookCardProps> = ({id,title,image}) => {
 
   return <div className="border p-4 rounded">
 
